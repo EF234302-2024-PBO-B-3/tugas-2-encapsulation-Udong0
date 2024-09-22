@@ -3,6 +3,8 @@ using Encapsulation.Employment;
 using System;
 using Encapsulation.Calendar;
 using Encapsulation.Banking;
+using Encapsulation.CarManagement;
+using System.Runtime.ConstrainedExecution;
 
 namespace Encapsulation;
 
@@ -53,6 +55,12 @@ public class Program
         Console.WriteLine($"Balance after withdrawal: {account.GetBalance()}");
 
         // Extra
+        Car myCar = new Car("Toyota", 120);
+        Console.WriteLine($"Brand: {myCar.Brand}, Speed: {myCar.Speed}");
+
+        myCar.Brand = "";
+        myCar.Speed = -10;
+        Console.WriteLine($"Brand: {myCar.Brand}, Speed: {myCar.Speed}");
 
     }
 }

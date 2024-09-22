@@ -10,7 +10,7 @@ namespace Encapsulation.Tests
         public void Constructor_ShouldInitializeProperties()
         {
             // Arrange & Act
-            Invoice invoice = new Invoice("001", "Part A", 10, 5.0);
+            Invoice invoice = new("001", "Part A", 10, 5.0);
 
             // Assert
             Assert.AreEqual("001", invoice.PartNumber);
